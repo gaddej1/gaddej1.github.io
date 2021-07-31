@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jabili Gadde - About Me</title>
+    <title>Jabili Gadde - Engauge</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -21,14 +23,13 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div id="dismiss">
                 <i class="fas fa-arrow-left"></i>
             </div>
-
+            
             <div class="sidebar-header">
                 <h3>Navigation</h3>
             </div>
@@ -47,10 +48,10 @@
                     <a href="contactme.html">Contact Me</a>
                 </li>
             </ul>
-
-            <p class="navBarPara">Check Out My: </p>
+            
+            <p class = "navBarPara">Check Out My: </p>
             <ul class="list-unstyled components">
-                <li>
+                 <li>
                     <a href="https://github.com/gaddej1" target = "_blank">GitHub</a>
                 </li>
                 <li>
@@ -78,22 +79,40 @@
                 </div>
             </nav>
             <div class="subheader">
-                <h2>About Me</h2>
+                <h2>Match App</h2>
             </div>
             <div class="content">
-                <figure>
-                    <img src="images/AboutMe/ProfessionalPhoto.jpg" alt="Photo of Jabili Gadde" class = "aboutmephoto">
-                </figure>
-                <p>
-                    My name is Jabili Gadde, and I am a sophomore Computer Science major and Interactive Multimedia minor attending The College of New Jersey. I took my first programming class when I was a sophomore in high school. I absolutely loved it, so I continued taking computer science classes for the rest of high school, and decided to pursue my passion by majoring in computer science in college.
-                </p>
+                <ul class = "projectList">
+                    <li class = "projectBullet">
+                        The Match App is an iOS mobile application that allows the user to play the matching game.
+                    </li>
 
-                <p>
-                    Since then, I have taken the time to indulge in my interest by learning subtopics of Computer Science, such as Data Science and Mobile App Development, as well as attending hackathons and learning other programming languages in my free time like Python and Swift. I also decided to share my love for technology by working as a Java tutor, working as an Assistant Instructor for technology related courses over the summer, as well as becoming a peer tutor at my college. I hope to become a Software Engineer or Software Developer after college so that I can contribute to this amazing field.
-                </p>
+                    <li class = "projectBullet">
+                        Used XCode and Swift to develop and code a UI Screen as well as code the specific actions for the game.
+                    </li>
+                </ul>
                 
-                <h5>Courses Taken</h5>
-                <p class = "coursesTaken">Data Structures, Discrete Structures, Introduction to Data Science, Analysis of Algorithms, Computer Architecture, 3D Game Development, Operating Systems, Database Systems</p>
+                <button class = "slideshow" onclick="plusDivs(-1)">&#10094;</button>
+                <button class = "slideshow" onclick="plusDivs(+1)">&#10095;</button>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 1 of 3</figcaption>
+                    <img class="codeImage" src="images/Project4/MatchChecking.png">
+                    <figcaption>This function checks if the two cards selected by the user are a match. If they are, it removes them. If not, it flips them back over.  </figcaption>
+                </figure>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 2 of 3</figcaption>
+                    <img class="codeImage" src="images/Project4/GameEnd.png">
+                    <figcaption>This function is called when the timer runs out and when two cards are matched and removed. The function loops through all of the cards to check if there are any cards that haven't been matched. If all of the cards have been matched, then it displays a message that the user has won the game. If they haven't all been matched, then, the function checks to see if there is time remaining, and if there isn't, then it informs the user that they lost. </figcaption>
+                </figure>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 3 of 3</figcaption>
+                    <img class="codeImage" src="images/Project4/CellConfiguration.png">
+                    <figcaption>This function configures the card cells to make them display the appropriate image based on if they are flipped up or flipped down, and animates them as well.  </figcaption>
+                </figure>
+                <hr>
             </div>
 
         </div>
@@ -144,5 +163,30 @@
                 });
             });
         }
+        
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
     </script>
-</body></html>
+
+</body>
+
+</html>

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jabili Gadde - About Me</title>
+    <title>Jabili Gadde - Data Science Final Project</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -18,6 +18,7 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                     <a href="portfolio.html">Portfolio</a>
                 </li>
                 <li>
-                    <a href="Resume.pdf" target = "_blank">Resume</a>
+                    <a href="Resume.pdf" target="_blank">Resume</a>
                 </li>
                 <li>
                     <a href="contactme.html">Contact Me</a>
@@ -51,10 +52,10 @@
             <p class="navBarPara">Check Out My: </p>
             <ul class="list-unstyled components">
                 <li>
-                    <a href="https://github.com/gaddej1" target = "_blank">GitHub</a>
+                    <a href="https://github.com/gaddej1" target="_blank">GitHub</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/jabili-gadde/" target = "_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/jabili-gadde/" target="_blank">LinkedIn</a>
                 </li>
             </ul>
         </nav>
@@ -78,22 +79,61 @@
                 </div>
             </nav>
             <div class="subheader">
-                <h2>About Me</h2>
+                <h2>Data Science Final Project</h2>
             </div>
             <div class="content">
-                <figure>
-                    <img src="images/AboutMe/ProfessionalPhoto.jpg" alt="Photo of Jabili Gadde" class = "aboutmephoto">
-                </figure>
-                <p>
-                    My name is Jabili Gadde, and I am a sophomore Computer Science major and Interactive Multimedia minor attending The College of New Jersey. I took my first programming class when I was a sophomore in high school. I absolutely loved it, so I continued taking computer science classes for the rest of high school, and decided to pursue my passion by majoring in computer science in college.
-                </p>
+                <ul class="projectList">
+                    <li class="projectBullet">
+                        For my Final Project in my Introduction to Data Science class, I developed a Shiny App with interactive graphs and tables using R.
+                    </li>
+                    <li class="projectBullet">
+                        The purpose of this web app is to allow the users to interact with these graphs and tables so that they can answer the question "Do Majors With More Men Than Women Tend to Have Higher Salaries?"
+                    </li>
+                </ul>
 
-                <p>
-                    Since then, I have taken the time to indulge in my interest by learning subtopics of Computer Science, such as Data Science and Mobile App Development, as well as attending hackathons and learning other programming languages in my free time like Python and Swift. I also decided to share my love for technology by working as a Java tutor, working as an Assistant Instructor for technology related courses over the summer, as well as becoming a peer tutor at my college. I hope to become a Software Engineer or Software Developer after college so that I can contribute to this amazing field.
-                </p>
-                
-                <h5>Courses Taken</h5>
-                <p class = "coursesTaken">Data Structures, Discrete Structures, Introduction to Data Science, Analysis of Algorithms, Computer Architecture, 3D Game Development, Operating Systems, Database Systems</p>
+                <button class = "slideshow" onclick="plusDivs(-1)">&#10094;</button>
+                <button class = "slideshow" onclick="plusDivs(+1)">&#10095;</button>
+
+                <figure class="mySlides">
+                    <figcaption class = "snippetNum">Snippet 1 of 6</figcaption>
+                    <img class="codeImage" src="images/Project2/Graph1UI.png">
+                    <figcaption>This code snippet shows how the UI for the "Average Salaries of Highest Paying Majors" graph and its accompanying slider are created.</figcaption>
+                </figure>
+
+                <figure class="mySlides">
+                    <figcaption class = "snippetNum">Snippet 2 of 6</figcaption>
+                    <img class="codeImage" src="images/Project2/Graph1Render.png">
+                    <figcaption>This code snippet shows how the actual contents of the "Average Salaries of Highest Paying Majors" graph are rendered. </figcaption>
+                </figure>
+
+                <figure class="mySlides">
+                    <figcaption class = "snippetNum">Snippet 3 of 6</figcaption>
+                    <img class="codeImage" src="images/Project2/Graph2UI.png">
+                    <figcaption>This code snippet shows how the UI for the "25th Percentile Salaries v.s. Percentage of Women in Each Major" graph and its accompanying radio button options are created.</figcaption>
+                </figure>
+
+                <figure class="mySlides">
+                    <figcaption class = "snippetNum">Snippet 4 of 6</figcaption>
+                    <img class="codeImage" src="images/Project2/Graph2Render.png">
+                    <figcaption>This code snippet shows how the actual contents of the "25th Percentile Salaries v.s. Percentage of Women in Each Major" graph are rendered.</figcaption>
+                </figure>
+
+                <figure class="mySlides">
+                    <figcaption class = "snippetNum">Snippet 5 of 6</figcaption>
+                    <img class="codeImage" src="images/Project2/Table1UI.png">
+                    <figcaption>This code snippet shows how the UI for the "Number of Majors with Highest Percentage of Women" table and its accompanying slider are created.</figcaption>
+                </figure>
+
+                <figure class="mySlides">
+                    <figcaption class = "snippetNum">Snippet 6 of 6</figcaption>
+                    <img class="codeImage" src="images/Project2/Table1Render.png">
+                    <figcaption>This code snippet shows how the actual contents of the "Number of Majors with Highest Percentage of Women" table are rendered.</figcaption>
+                </figure>
+
+                <hr>
+
+                <p class="view"> See the code for this project on GitHub <a href="https://github.com/gaddej1/Data-Science-Final-Project" class="projectLinks" target="_blank">here</a>.</p>
+                <p class="view"> See my Shiny app <a href="https://jabiligadde.shinyapps.io/finalproject/" class="projectLinks" target="_blank">here</a>.</p>
             </div>
 
         </div>
@@ -144,5 +184,31 @@
                 });
             });
         }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
     </script>
-</body></html>
+
+</body>
+
+</html>

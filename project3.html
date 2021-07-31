@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jabili Gadde - About Me</title>
+    <title>Jabili Gadde - Engauge</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -28,7 +30,7 @@
             <div id="dismiss">
                 <i class="fas fa-arrow-left"></i>
             </div>
-
+            
             <div class="sidebar-header">
                 <h3>Navigation</h3>
             </div>
@@ -47,10 +49,10 @@
                     <a href="contactme.html">Contact Me</a>
                 </li>
             </ul>
-
-            <p class="navBarPara">Check Out My: </p>
+            
+            <p class = "navBarPara">Check Out My: </p>
             <ul class="list-unstyled components">
-                <li>
+                 <li>
                     <a href="https://github.com/gaddej1" target = "_blank">GitHub</a>
                 </li>
                 <li>
@@ -78,22 +80,58 @@
                 </div>
             </nav>
             <div class="subheader">
-                <h2>About Me</h2>
+                <h2>Engauge</h2>
             </div>
             <div class="content">
-                <figure>
-                    <img src="images/AboutMe/ProfessionalPhoto.jpg" alt="Photo of Jabili Gadde" class = "aboutmephoto">
-                </figure>
-                <p>
-                    My name is Jabili Gadde, and I am a sophomore Computer Science major and Interactive Multimedia minor attending The College of New Jersey. I took my first programming class when I was a sophomore in high school. I absolutely loved it, so I continued taking computer science classes for the rest of high school, and decided to pursue my passion by majoring in computer science in college.
-                </p>
+                <ul class = "projectList">
+                    <li class = "projectBullet">
+                        Engauge is a tool that provides audience analytics for the presenter so that the presenter can dynamically change their presentation styles and increase engagement.
+                    </li>
 
-                <p>
-                    Since then, I have taken the time to indulge in my interest by learning subtopics of Computer Science, such as Data Science and Mobile App Development, as well as attending hackathons and learning other programming languages in my free time like Python and Swift. I also decided to share my love for technology by working as a Java tutor, working as an Assistant Instructor for technology related courses over the summer, as well as becoming a peer tutor at my college. I hope to become a Software Engineer or Software Developer after college so that I can contribute to this amazing field.
-                </p>
+                    <li class = "projectBullet">
+                        Used Microsoft Azure's Custom Vision to create and train a machine learning model that determines whether or not a person is paying attention.
+                    </li>
+
+                    <li class = "projectBullet">
+                        Used HTML, CSS, and Javascript to implement a front end that demontrated the functionality of our machine learning model.
+                    </li>
+
+                    <li class = "projectBullet">
+                        This project placed in the 3rd place category at the Cisco Webex Virtual Hackathon.
+                    </li>
+                </ul>
                 
-                <h5>Courses Taken</h5>
-                <p class = "coursesTaken">Data Structures, Discrete Structures, Introduction to Data Science, Analysis of Algorithms, Computer Architecture, 3D Game Development, Operating Systems, Database Systems</p>
+                <button class = "slideshow" onclick="plusDivs(-1)">&#10094;</button>
+                <button class = "slideshow" onclick="plusDivs(+1)">&#10095;</button>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 1 of 4</figcaption>
+                    <img class="codeImage" src="images/Project3/SnapshotFunction.png">
+                    <figcaption>This code snippet takes a picture, converts it to base64, converts base64 to blob (binary large object), and makes a post request to our Custom Vision Model. It then displays the result on the webpage. </figcaption>
+                </figure>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 2 of 4</figcaption>
+                    <img class="codeImage" src="images/Project3/BlobToBase64.png">
+                    <figcaption>This code snippet converts base 64 to blob (binary large object). </figcaption>
+                </figure>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 3 of 4</figcaption>
+                    <img class="codeImage" src="images/Project3/SnapshotHTML.png">
+                    <figcaption>This code snippet displays a "video" on the webpage, which is actually the camera so that the user can take a photo. When the user clicks on the snapshot button, the snapshot() function is called, which takes a picture of the user.</figcaption>
+                </figure>
+                
+                <figure class = "mySlides">
+                    <figcaption class = "snippetNum">Snippet 4 of 4</figcaption>
+                    <img class="codeImage" src="images/Project3/VideoJS.png">
+                    <figcaption>This code snippet demonstrates how the camera is displayed on the webpage.</figcaption>
+                </figure>
+
+                <hr>
+                
+                <p class="view"> See the code for this project on GitHub <a href="https://github.com/anajha1/engauge" class = "projectLinks" target = "_blank">here</a>.</p>
+                <p class="view"> See a demonstration of the project <a href="https://drive.google.com/drive/u/1/folders/1M9EkB0jxG2G-K0If3Q_6JlZWRmhJ9E0Z" class = "projectLinks" target = "_blank">here</a>.</p>
             </div>
 
         </div>
@@ -144,5 +182,29 @@
                 });
             });
         }
+        
+         var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
     </script>
+
 </body></html>

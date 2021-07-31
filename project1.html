@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jabili Gadde - About Me</title>
+    <title>Jabili Gadde - Recipes for Cancer Patients</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -21,14 +21,13 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div id="dismiss">
                 <i class="fas fa-arrow-left"></i>
             </div>
-
+            
             <div class="sidebar-header">
                 <h3>Navigation</h3>
             </div>
@@ -47,10 +46,10 @@
                     <a href="contactme.html">Contact Me</a>
                 </li>
             </ul>
-
-            <p class="navBarPara">Check Out My: </p>
+            
+            <p class = "navBarPara">Check Out My: </p>
             <ul class="list-unstyled components">
-                <li>
+                 <li>
                     <a href="https://github.com/gaddej1" target = "_blank">GitHub</a>
                 </li>
                 <li>
@@ -78,22 +77,31 @@
                 </div>
             </nav>
             <div class="subheader">
-                <h2>About Me</h2>
+                <h2>Recipes for Cancer Patients</h2>
             </div>
             <div class="content">
-                <figure>
-                    <img src="images/AboutMe/ProfessionalPhoto.jpg" alt="Photo of Jabili Gadde" class = "aboutmephoto">
-                </figure>
-                <p>
-                    My name is Jabili Gadde, and I am a sophomore Computer Science major and Interactive Multimedia minor attending The College of New Jersey. I took my first programming class when I was a sophomore in high school. I absolutely loved it, so I continued taking computer science classes for the rest of high school, and decided to pursue my passion by majoring in computer science in college.
-                </p>
+                <ul class = "projectList">
+                    <li class = "projectBullet">Recipes for Cancer Patients is a front end project that allows the user to fetch and filter recipes based on meal type and various ingredients that are beneficial to cancer patients.
+                    </li>
 
-                <p>
-                    Since then, I have taken the time to indulge in my interest by learning subtopics of Computer Science, such as Data Science and Mobile App Development, as well as attending hackathons and learning other programming languages in my free time like Python and Swift. I also decided to share my love for technology by working as a Java tutor, working as an Assistant Instructor for technology related courses over the summer, as well as becoming a peer tutor at my college. I hope to become a Software Engineer or Software Developer after college so that I can contribute to this amazing field.
-                </p>
+                    <li class = "projectBullet">
+                        The front end was built using HTML, CSS, and Javascript, and we incorporated the spoonacular API into our code in order to filter recipes based on user specifications.
+                    </li>
+
+                    <li class = "projectBullet">
+                        This project won Best Overall Hack at HackDown 2020.
+                    </li>
+                </ul>
                 
-                <h5>Courses Taken</h5>
-                <p class = "coursesTaken">Data Structures, Discrete Structures, Introduction to Data Science, Analysis of Algorithms, Computer Architecture, 3D Game Development, Operating Systems, Database Systems</p>
+                <figure>
+                    <img src="images/Project1/RecipesForCancerPatientsCodeSnippet1.png" alt="Code Snippet 1" class = "codeImage">
+                    <figcaption>This function makes API requests that fetch recipes based on specifications of meal type and ingredients.</figcaption>
+                </figure>
+                
+                <hr>
+
+                <p class="view"> See the code for this project on GitHub <a href="https://github.com/gaddej1/RecipesForCancerPatients" class = "projectLinks" target = "_blank">here</a>.</p>
+                <p class="view"> See the Devpost submission for this project <a href="https://devpost.com/software/recipes-for-cancer-patients" class = "projectLinks" target = "_blank">here</a>.</p>
             </div>
 
         </div>
@@ -145,4 +153,6 @@
             });
         }
     </script>
-</body></html>
+</body>
+
+</html>
